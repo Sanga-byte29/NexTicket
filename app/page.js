@@ -17,7 +17,7 @@ const getTickets = async () => {
 
 //time to fetch tickets card
 const Dashboard = async () => {
-  const {tickets} = await getTickets();
+  const tickets = await getTickets();
 //getting unique categories mapping over tickets and everytime we get we will pass to category and remove duplicates
   const uniqueCategories = [
     ...new Set(tickets?.map(({category}) => category))
